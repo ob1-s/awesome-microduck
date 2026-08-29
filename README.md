@@ -1,77 +1,90 @@
 # Awesome MicroDuck 🦆
 
-A curated list of awesome MicroDuck projects, games, tools, and hardware mods — for the 25 cm open-source biped from [Pollen Robotics](https://pollen-robotics.com/microduck).
+A small, curated list of community-built software, simulations, tools, and
+hardware work for Pollen Robotics' [MicroDuck](https://pollen-robotics.com/microduck/).
 
-> MicroDuck is a ~800 g, 25 cm biped with 15 servos, camera + LiDAR + 2 IMUs, running a 50 Hz control loop from ONNX policies trained in [microduck_rl](https://github.com/pollen-robotics/microduck_rl) (MuJoCo Warp + PPO, BAM M6). This list is community-maintained and not affiliated with Pollen.
+> This list is independent of Pollen Robotics. It covers projects built around
+> MicroDuck, not a rewritten copy of Pollen's launch material. Official
+> software, shipped policies, product features, and generic dependencies are
+> linked as upstream references below, not presented as community projects.
 
-Inspired by the explosion after pre-orders opened Aug 27, 2026 — share what you’re building!
+**Reviewed:** 2026-08-29
 
-**Contents**
+## Contents
 
-- [Official](#official) · [Games](#games) · [Sim & Tools](#sim--tools) · [VR & Teleop](#vr--teleop) · [Integrations](#integrations) · [Hardware & Custom Parts](#hardware--custom-parts) · [Community Policies](#community-policies) · [Learning](#learning)
+- [Community software & integrations](#community-software--integrations)
+- [Simulation & policy research](#simulation--policy-research)
+- [Demos & applications](#demos--applications)
+- [Hardware & fabrication](#hardware--fabrication)
+- [Upstream reference](#upstream-reference)
+- [Contributing](#contributing)
 
----
+## Community software & integrations
 
-## Official
+- [DuckKit](https://github.com/craigm26/duckkit) — Pure Swift MicroDuck runtime and simulation package with policy loading, kinematics, protocol types, and Linux tests.
+- [Embodied Agent](https://github.com/mjschock/embodied-agent) — Simulation-first multi-robot agent platform with a MicroDuck MuJoCo/ONNX adapter and semantic skill API.
+- [Meckie Duck Gateway](https://github.com/rangerchaz/meckie-duck-gateway) — Small HTTP gateway and hardware-free protocol double for experimenting with MicroDuck control from scripts, agents, or home automation.
+- [MicroDuck MCP](https://github.com/aj-dev-smith/microduck-mcp) — MCP server and CPU MuJoCo simulator exposing MicroDuck intents, sensing, tricks, camera frames, and agent-facing tools.
+- [MicroDuck Runtime (legacy)](https://github.com/TommyZihao/microduck_runtime/blob/main/README.md) — Legacy community Raspberry Pi runtime with 3-axis body-pose control; exploratory and separate from Pollen's current runtime.
+- [OpenCastor — MicroDuck](https://docs.opencastor.com/robots/microduck/) — Third-party runtime integration that discovers MicroDucks, sends intent commands through `robotd`, and composes routines.
+- [quackd](https://github.com/rokbenko/quackd) — LLM goal-planning layer with a bundled simulator, `.duck` task files, safety rules, and MCP support.
+- [Strands Robots — MicroDuck](https://strands-labs.github.io/robots/policies/microduck/) — Third-party Python/MuJoCo provider for running Pollen MicroDuck policies through a common simulation and hardware interface.
+- [uDuck Registry](https://uduck-registry.pages.dev/) — Community catalog of MicroDuck policy descriptors and artifact links.
 
-- [MicroDuck](https://github.com/pollen-robotics/microduck) — Duck's brain: `robotd` 50 Hz loop, `updaterd`, `padd`, `mediad` WebRTC, on Rockchip RK3566.
-- [microduck_rl](https://github.com/pollen-robotics/microduck_rl) — RL training envs (mjlab), PPO, sim2real, `scripts/export.py` ONNX with baked normalizer. 13 tasks (Velocity, VelStand, Roller, Roulade, BallKick…).
-- [MicroDuck Simulator](https://huggingface.co/spaces/pollen-robotics/microduck-simulator) — In-browser MuJoCo WASM + onnxruntime-web, multiplayer ghosts via Trystero, switch legs/rollers with `M`.
-- [Pollen Discord](https://discord.com/invite/pollen) — #microduck, builds on show, help when a leg does something strange.
+## Simulation & policy research
 
-## Games
+- [MicroDuck Backflip](https://github.com/Lulzx/microduck-backflip) — Reproducible `mjlab` backflip task with a standing-only evaluation battery, experiment log, and explicit safety gates; simulation work, not a hardware claim.
+- [MicroDuck Courier](https://github.com/selinayfilizp/microduck-courier) — MuJoCo apartment-delivery task with a trained policy, rollout artifacts, and telemetry.
+- [MicroDuck Lab](https://github.com/jvpflum/microduck-lab) — DGX Spark workspace around the official training source with smoke tests, policy evaluation, and a local policy-bench workflow.
+- [MicroDuck RL on Genesis](https://github.com/Macmachi/microduck-rl-genesis) — Genesis port of the MicroDuck walking task for AMD/ROCm systems, with actuator and sim-to-real comparisons documented.
+- [Waddle Locomotion](https://github.com/nickoenig37/mjlab_microduck_waddle) — Community `mjlab` training project for experimenting with an alternative MicroDuck gait.
 
-- [Duck Races](https://pollen-robotics.com/microduck) — Community races on flat/rough tracks (Velocity task). Share your time!
-- [Roller Glide Challenge](https://github.com/pollen-robotics/microduck_rl#roller) — Downhill slope gliding on `robot_allcollisions_rollers.xml` (5°–15°).
-- [Ball Kick Arcade](https://huggingface.co/spaces/pollen-robotics/microduck-simulator) — 70 mm / 15 g ball kicking (`Mjlab-BallKick-Flat-MicroDuck`), ball-blind actor.
-- [Roulade Run](https://github.com/pollen-robotics/microduck_rl) — Forward roll over head, land on feet (`Roulade` task).
+## Demos & applications
 
-## Sim & Tools
+- [MicroDuck AR](https://huggingface.co/spaces/multimodalart/microduck-ar) — Community WebXR/AR adaptation of the MicroDuck simulator with AR placement and ground-pick interaction; it uses Pollen's policies rather than publishing new weights.
+- [MicroDuck iPhone Simulator](https://github.com/littlejohntj/microduck-sim) — Native Swift/MuJoCo/RealityKit simulator that runs the released policies on-device and includes AR mode.
+- [MicroDuck Jump Playground](https://github.com/Liyucheng1997/318_lab-microduck-simulator) — Fork of the browser simulator with a custom-trained vertical-jump policy and live demo.
+- [Microquack](https://github.com/lryain/microquack) — Procedural droid-voice engine and WebAssembly experience for MicroDuck, built around a reusable Rust core.
 
-- [uDuck Registry](https://github.com/ob1-s/uduck-registry) — Community policy index (61-D →14 @50Hz), `pnpm validate` + MuJoCo `sim_verified` CI (private). **Thin index, not a host.**
-- [mjlab](https://github.com/mujocolab/mjlab) — MuJoCo Warp training framework behind microduck_rl.
-- [microduck_runtime](https://github.com/TommyZihao/microduck_runtime) — Community runtime for `standing_body_control` and custom policies.
-- [BAM](https://github.com/Rhoban/bam) — Better Actuator Model (FrictionDRBam) used for XL330.
+## Hardware & fabrication
 
-## VR & Teleop
+- [MicroDuck Replica](https://github.com/fanhao375/microduck-replica) — Chinese/English mechanical reconstruction study with assembly drawings, CAD exports, hole analysis, and fabrication notes derived from the public MJCF/STL model.
 
-- [WebRTC Console](https://github.com/pollen-robotics/microduck/blob/main/docs/design/remote-webrtc.md) — `mediad` streams H.264 + `control` datachannel to browser on LAN (`:8080`).
-- [WebSocket SDK](https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md#53) — Server-side LLM control: `get_frame` JPEG on demand, no media stack (for agents).
-- [Gamepad Cheatsheet](https://github.com/pollen-robotics/microduck/blob/main/docs/robot/cheatsheet.md#gamepad-configd) — Pair a pad, map intents (`G` ground pick, `Y` sit/stand, `R` roulade).
-- [ToF Theremin](https://github.com/pollen-robotics/microduck) — Head ToF 8×8 `tof.stream` → head FK, `control` intent.
+## Upstream reference
 
-## Integrations
+These are the canonical starting points for the robot and its original release;
+they are intentionally not counted as community entries:
 
-- [Discord Bot](https://discord.com/invite/pollen) — Post your `uduck submit` PR, get `sim_verified` badge.
-- [Hugging Face Jobs](https://github.com/pollen-robotics/microduck_rl/blob/develop/src/mjlab_microduck/hf_jobs.py) — `train_cli.py --hf-jobs` on HF infrastructure.
-- [NFC Tags](https://pollen-robotics.com/microduck/press-kit) — 10 tags in packs, Polaroid NFC for behaviors.
-- [Chorale](https://github.com/pollen-robotics/microduck) — Each duck gets its own audio identity at first wake.
+- [MicroDuck browser simulator](https://huggingface.co/spaces/pollen-robotics/microduck-simulator)
+- [MicroDuck RL training source](https://github.com/pollen-robotics/microduck_rl)
+- [MicroDuck runtime](https://github.com/pollen-robotics/microduck)
 
-## Hardware & Custom Parts
+Individual ONNX policies belong in the uDuck Registry, not in this list.
 
-- [Roller Pack](https://pollen-robotics.com/microduck) — 2 rollers + ball + laser pointer + NFC, official.
-- [Onshape-to-Robot](https://github.com/Rhoban/onshape-to-robot) — MJCF export used for `config_mjcf_*.json` (see `microduck_rl/src/mjlab_microduck/robot/microduck/`).
-- [3D Printable Feet](https://github.com/pollen-robotics/microduck/discussions) — Community soles/legs (SOFT/share alike, check CC BY-SA-NC).
-- [Spare Motors](https://pollen-robotics.com/microduck) — 3× XL330, 5× cables, dual charger in Maker pack.
+## Contributing
 
-## Community Policies
+This list stays intentionally small. Add a project only when it gives people
+something concrete to inspect, run, build, or learn today.
 
-- [Waddle Locomotion](https://github.com/nickoenig37/mjlab_microduck_waddle) — Nick Koenig custom waddle (`registry/behaviors/waddle-locomotion.json`).
-- [Standing Body Control](https://github.com/TommyZihao/microduck_runtime) — Tommy Zihao 6-DoF body pose.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for submission rules.
 
-## Learning
+Use one line per project:
 
-- [MicroDuck RL AGENTS.md](https://github.com/pollen-robotics/microduck_rl/blob/develop/AGENTS.md) — Env-building workflow + reward design rules.
-- [Architecture](https://github.com/pollen-robotics/microduck/blob/main/docs/design/architecture.md) — Daemons, bus, update system.
+```markdown
+- [Project Name](https://canonical-project-url) — One factual sentence about its MicroDuck-specific value.
+```
 
----
+Good submissions:
 
-### Contributing
+- are public and usable or meaningfully inspectable now;
+- add clear MicroDuck-specific value;
+- link directly to the project, app, dataset, CAD work, or guide;
+- disclose when the project is a fork, experimental, simulator-only, or yours;
+- are alphabetized within their section and appear only once.
 
-1. One line per entry: `- [Name](link) — One sentence what it does.`
-2. Put it in the right category, alphabetical.
-3. No self-promo spam — must be usable by others.
-4. Open a PR! See [CONTRIBUTING.md](CONTRIBUTING.md).
+Please do not submit Pollen's official repositories or release features,
+generic dependencies, product listings, individual policies, named challenges
+without a project behind them, profile/invite links, or forks with no meaningful
+change. If a project moves or disappears, update or remove its entry.
 
-*Want a policy indexed? Add it to [uDuck Registry](https://uduck-registry.pages.dev/docs/contribute) instead — this list is for *things around* the duck.*
-
+Open a PR with the one-line addition and click the link before submitting.
