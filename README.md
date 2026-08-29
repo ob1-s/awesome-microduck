@@ -33,6 +33,7 @@ hardware work for Pollen Robotics' [MicroDuck](https://pollen-robotics.com/micro
 
 ## Simulation & policy research
 
+- [Isaac Lab MicroDuck port](https://github.com/5usu/IsaacLab/tree/5usu/microduck-port) — IsaacLab extension with MicroDuck assets, BAM/backlash actuator models, RSL-RL tasks, and PhysX validation; simulation/training only.
 - [MicroDuck Backflip](https://github.com/Lulzx/microduck-backflip) — Reproducible `mjlab` backflip task with a standing-only evaluation battery, experiment log, and explicit safety gates; simulation work, not a hardware claim.
 - [MicroDuck Courier](https://github.com/selinayfilizp/microduck-courier) — MuJoCo apartment-delivery task with a trained policy, rollout artifacts, and telemetry.
 - [MicroDuck Lab](https://github.com/jvpflum/microduck-lab) — DGX Spark workspace around the official training source with smoke tests, policy evaluation, and a local policy-bench workflow.
