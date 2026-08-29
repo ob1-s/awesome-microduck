@@ -1,14 +1,7 @@
 # Awesome MicroDuck 🦆
 
-A small, curated list of community-built software, simulations, tools, and
-hardware work for Pollen Robotics' [MicroDuck](https://pollen-robotics.com/microduck/).
-
-> This list is independent of Pollen Robotics. It covers projects built around
-> MicroDuck, not a rewritten copy of Pollen's launch material. Official
-> software, shipped policies, product features, and generic dependencies are
-> linked as upstream references below, not presented as community projects.
-
-**Reviewed:** 2026-08-29
+Community-built software, simulations, tools, and hardware work for Pollen
+Robotics' [MicroDuck](https://pollen-robotics.com/microduck/).
 
 ## Contents
 
@@ -53,39 +46,14 @@ hardware work for Pollen Robotics' [MicroDuck](https://pollen-robotics.com/micro
 
 ## Upstream reference
 
-These are the canonical starting points for the robot and its original release;
-they are intentionally not counted as community entries:
+Pollen's official MicroDuck software:
 
 - [MicroDuck browser simulator](https://huggingface.co/spaces/pollen-robotics/microduck-simulator)
 - [MicroDuck RL training source](https://github.com/pollen-robotics/microduck_rl)
 - [MicroDuck runtime](https://github.com/pollen-robotics/microduck)
 
-Individual ONNX policies belong in the uDuck Registry, not in this list.
+For individual ONNX policies, see the [uDuck Registry contribution guide](https://uduck-registry.pages.dev/docs/contribute).
 
 ## Contributing
 
-This list stays intentionally small. Add a project only when it gives people
-something concrete to inspect, run, build, or learn today.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for submission rules.
-
-Use one line per project:
-
-```markdown
-- [Project Name](https://canonical-project-url) — One factual sentence about its MicroDuck-specific value.
-```
-
-Good submissions:
-
-- are public and usable or meaningfully inspectable now;
-- add clear MicroDuck-specific value;
-- link directly to the project, app, dataset, CAD work, or guide;
-- disclose when the project is a fork, experimental, simulator-only, or yours;
-- are alphabetized within their section and appear only once.
-
-Please do not submit Pollen's official repositories or release features,
-generic dependencies, product listings, individual policies, named challenges
-without a project behind them, profile/invite links, or forks with no meaningful
-change. If a project moves or disappears, update or remove its entry.
-
-Open a PR with the one-line addition and click the link before submitting.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to add a project.
