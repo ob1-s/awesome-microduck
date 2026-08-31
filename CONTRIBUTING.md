@@ -1,7 +1,7 @@
-# Contributing to Awesome MicroDuck
+# Contributing to Awesome Microduck
 
-Awesome MicroDuck is a manually curated list of independent projects around
-Pollen Robotics' MicroDuck. The goal is signal: a short list of things someone
+Awesome Microduck is a manually curated list of independent projects around
+Pollen Robotics' Microduck. The goal is signal: a short list of things someone
 can inspect, run, build, or learn from today.
 
 ## Add one project
@@ -9,7 +9,7 @@ can inspect, run, build, or learn from today.
 Use one line with a direct, canonical URL:
 
 ```markdown
-- [Project Name](https://canonical-project-url) — One factual sentence about its MicroDuck-specific value.
+- [Project Name](https://canonical-project-url) — One factual sentence about its Microduck-specific value.
 ```
 
 Before opening a PR:
@@ -22,7 +22,7 @@ Before opening a PR:
 ## What belongs here
 
 - Public software, apps, agents, simulators, training work, tools, CAD, parts,
-  or creative projects with clear MicroDuck-specific value.
+  or creative projects with clear Microduck-specific value.
 - Early work is welcome when the repository is real and inspectable; describe
   its current limits instead of implying hardware validation.
 - A project appears once, with one link and one useful sentence.
@@ -33,10 +33,10 @@ Before opening a PR:
   features, documentation, or launch demos. Those belong in the README's
   upstream reference.
 - Generic dependencies such as MuJoCo, `mjlab`, or actuator libraries unless
-  they have a distinct MicroDuck project or integration to point at.
+  they have a distinct Microduck project or integration to point at.
 - Individual ONNX policies, task names, challenge prompts, product bundles, or
   a generic profile/invite link.
-- A fork or mirror that does not add a meaningful MicroDuck-specific change.
+- A fork or mirror that does not add a meaningful Microduck-specific change.
 
 Self-submissions are welcome. Keep the PR focused and explain the one reason
 the project deserves a place on the list. If a link dies or a project stops
