@@ -14,18 +14,23 @@ Robotics' [Microduck](https://pollen-robotics.com/microduck/).
 
 ## Community software & integrations
 
+- [AwesomeDucks Policy Hub](https://awesomeducks.com/policies) — Unofficial catalog of the nine official policies plus community entries with previews and publisher file links; community policies are simulation-shared.
 - [DuckKit](https://github.com/craigm26/duckkit) — Pure Swift Microduck runtime and deterministic MuJoCo simulation with ONNX policy loading, kinematics, protocol, voice, and choreography support; Linux-tested.
 - [Embodied Agent](https://github.com/mjschock/embodied-agent) — Simulation-first multi-robot agent platform with a Microduck MuJoCo/ONNX adapter and semantic skill API.
 - [Meckie Duck Gateway](https://github.com/rangerchaz/meckie-duck-gateway) — HTTP gateway for Pollen Microduck's WebRTC/JSON-RPC control with an included hardware-free fake, for scripts, agents, and home automation.
+- [Microduck Agent Plugin](https://github.com/acnlabs/microduck-plugin) — Agent skill for the train-to-Hub-to-robot loop via Hugging Face Jobs with localhost sim control; experimental.
 - [Microduck App](https://github.com/apirrone/microduck_app) — Microduck companion PWA with live 3D state, map view, brain/battery HUD, and commands; deployable on a Raspberry Pi and browsable from a phone.
 - [Microduck MapLoc](https://github.com/apirrone/microduck_maploc_rs) — Rust 2D ToF submap-SLAM, Monte Carlo relocalization, A* planning, and telemetry streaming for Microduck, with a Python/MuJoCo reference.
 - [Microduck MCP](https://github.com/aj-dev-smith/microduck-mcp) — MCP server, CLI, and browser debug UI for a CPU MuJoCo Microduck simulator using Pollen's ONNX policies; exposes intent tools, sensing, camera frames, behavior machines, and policy tooling.
 - [Microduck Miniverse](https://github.com/DollhouseRobotics/microduck-miniverse) — Repackages Pollen's nine official ONNX policies into validated, checksummed deterministic Miniverse simulation bundles.
 - [Microduck Policy Golden Vectors](https://huggingface.co/datasets/craigm26/microduck-policy-golden-vectors) — SHA256-pinned golden observation→action vectors recorded from the official policies for conformance-testing custom Microduck runners.
 - [Microduck Runtime (legacy)](https://github.com/TommyZihao/microduck_runtime) — Legacy community Raspberry Pi Zero 2W runtime for 15 XL330 servos and a BNO055 IMU, with gamepad, ground-pick/fall, and body-pose controls; separate from Pollen's current runtime.
+- [microduck-cli](https://github.com/agentculture/microduck-cli) — Agent/human CLI for env, duck, policy, and rules-loop control via `robotd` JSON-RPC; verified in simulation, never driven on hardware.
+- [MicroduckHub](https://microduckhub.com) — Community policy browser for shipped behaviors and Hub retrains; browse-only until upstream's install channel ships.
 - [OpenCastor — Microduck](https://docs.opencastor.com/robots/microduck/) — Third-party OpenCastor integration that discovers Microducks, sends intent commands through `robotd`, and composes routines.
 - [OpenMicroduck](https://github.com/SaberOnGo/open-microduck) — Unofficial English/Chinese Microduck research and reference project covering software architecture, simulation, sim-to-real, hardware research, and reverse engineering; makes no open-hardware claim.
 - [quackd](https://github.com/rokbenko/quackd) — LLM goal-planning layer with a bundled simulator, `.duck` task files, safety rules, and MCP support.
+- [RDK Robot Learning Platform](https://github.com/D-Robotics/robot-learning-platform) — MicroDuck/RDK-X5 workbench for recording, local or cloud training, Sim2Real eval, and read-only deploy preflight; real-device paths need operator-supplied adapters.
 - [Strands Robots — Microduck](https://strands-labs.github.io/robots/policies/microduck/) — Third-party Python/MuJoCo provider for running Pollen Microduck policies through a common simulation and hardware interface.
 - [uDuck Registry](https://uduckmoves.com/) — Community catalog of Microduck policy descriptors and artifact links.
 
@@ -39,6 +44,7 @@ Robotics' [Microduck](https://pollen-robotics.com/microduck/).
 - [Microduck Electric Slide](https://huggingface.co/datasets/Histochemichael/microduck-electric-slide-motion) — Reproducible Electric Slide motion/retargeting dataset with QC and 25-duck MuJoCo validation artifacts; the trained command controller is published separately and is simulation-only.
 - [Microduck Isaac Lab port](https://github.com/kabilankb/isaaclab-microduck) — Isaac Lab 3.0/Newton MJWarp port with locomotion, ball-kick, and two-duck tasks; BallKick/BallRally are trained and measured, while locomotion remains a simulation milestone and is not deployable.
 - [Microduck Lab — Mac CPU](https://github.com/jonathanhawkins/microduck-lab) — Agent-friendly CPU-first Mac/Linux Microduck training lab with live browser teaching, staged trick/backflip curricula, baked-normalizer ONNX export, and `render-rollout`, `watch-training`, and `restart-servers` skills; simulation-only.
+- [Microduck Playground](https://github.com/Vottivott/microduck-playground) — Reproducible RL experiments (swing, basketball balance, running, stilts, ladder climb) with ONNX checkpoints plus printable hardware add-ons; simulation-only, hardware untested.
 - [Microduck RL on Genesis](https://github.com/Macmachi/microduck-rl-genesis) — Genesis port of the Microduck walking task for AMD/ROCm systems with committed flat, rough-terrain, and backlash ONNX policies; Genesis–MuJoCo validation is documented, but no physical-robot validation.
 - [Microduck Sidekick Dance](https://github.com/pezzonovante7/microduck-sidekick-dance) — Drop-in mjlab reward task for a lateral side-kick dance; task and training scaffold only, not a trained policy.
 - [Microduck Sim](https://github.com/lgtkgtv/microduck_sim) — Self-contained educational workspace with custom PPO training, ONNX export, and a six-phase Microduck curriculum.
@@ -46,9 +52,11 @@ Robotics' [Microduck](https://pollen-robotics.com/microduck/).
 - [Microduck Skill Playground](https://github.com/AlexandreEDMOND/microduck-rl-lab) — MuJoCo playground built on the official environments; retrains five skills, composes an automatic course, and currently explores an assisted front-salto curriculum.
 - [Microduck Step-Up + Head-Brake Recovery](https://github.com/bihaokun/microduck-step-up-policy) — Simulation-validated ONNX policy pair for a 25 mm step-up with head-brake recovery; hardware-unvalidated.
 - [MJX Microduck](https://github.com/APX103/mjx_microduck) — From-scratch MJX (JAX) and Brax PPO reimplementation of the Microduck training tasks with ONNX export.
+- [wicroduck](https://github.com/ngxson/wicroduck) — All-in-browser Microduck toolchain for simulation, motion authoring, and CPU PPO training; simulation-only, in-browser training still in progress.
 
 ## Demos & applications
 
+- [Microduck Academy](https://github.com/kingsleyli920/microduck-academy) — Bilingual local-first RL classroom with in-browser Python lessons and the official 3D simulator embedded; early preview, training/export still roadmap.
 - [Microduck Anatomy](https://huggingface.co/spaces/mishig/microduck-anatomy) — Interactive Microduck anatomy viewer with walking motion, staged component focus, and exploded assembly views.
 - [Microduck AR](https://huggingface.co/spaces/multimodalart/microduck-ar) — Community WebXR/AR adaptation of the Microduck simulator with AR placement and ground-pick interaction; it uses Pollen's policies rather than publishing new weights.
 - [Microduck Flock Band](https://github.com/SAMBAS123/microduck-sandbox) — Community fork of the browser sandbox adding a pentatonic music mode controlled by the duck's movement and actions; it adds no new policies.
@@ -79,6 +87,8 @@ Pollen's official Microduck software:
 - [Microduck GStreamer plugins](https://github.com/pollen-robotics/microduck-gst-plugins) — Official prebuilt aarch64 GStreamer plugins for Rockchip MPP hardware encoding and gst-plugins-rs WebRTC.
 - [Microduck RL](https://github.com/pollen-robotics/microduck_rl) — Official mjlab/MuJoCo Warp PPO training environments with BAM actuator physics, domain randomization, backlash simulation, and ONNX export.
 - [Microduck runtime](https://github.com/pollen-robotics/microduck) — Official Rust runtime and onboard software stack for the Microduck robot.
+- [Microduck policies](https://huggingface.co/pollen-robotics/microduck-policies) — Official shipped ONNX policy checkpoints.
+- [Microduck emotions](https://huggingface.co/datasets/pollen-robotics/microduck-emotions) — Official motion-and-sound emotion pack (keyframes, audio, renders) validated on the real robot.
 
 Browse individual ONNX policies in the [uDuck Registry](https://uduckmoves.com/). To add one, see the [contribution guide](https://github.com/ob1-s/uduck-registry/blob/main/CONTRIBUTING.md).
 
